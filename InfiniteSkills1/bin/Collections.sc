@@ -46,21 +46,21 @@ object Collections {
 	
 	val arr3b = Array.fill(10)("")            //> arr3b  : Array[String] = Array("", "", "", "", "", "", "", "", "", "")
 	
-	List.fill(5)(math.random)                 //> res8: List[Double] = List(0.8972483670936383, 0.5348101112883581, 0.44206949
-                                                  //| 178238786, 0.4974801848403898, 0.33618912946064916)
+	List.fill(5)(math.random)                 //> res8: List[Double] = List(0.8014042704714733, 0.4421308537257175, 0.92644030
+                                                  //| 04397885, 0.22084468463868112, 0.3278405069955681)
 	
 	def littleArray(i:Int):List[Int] = List(i,i,i)
                                                   //> littleArray: (i: Int)List[Int]
 	
 	littleArray(3)                            //> res9: List[Int] = List(3, 3, 3)
-	littleArray(util.Random.nextInt)          //> res10: List[Int] = List(-599209028, -599209028, -599209028)
+	littleArray(util.Random.nextInt)          //> res10: List[Int] = List(-1452625353, -1452625353, -1452625353)
 	
 	def interestingArray(i: => Int):List[Int] = {
 		List(i,i,i)
 	}                                         //> interestingArray: (i: => Int)List[Int]
 	
 	interestingArray(3)                       //> res11: List[Int] = List(3, 3, 3)
-	interestingArray(util.Random.nextInt)     //> res12: List[Int] = List(485527250, 1871570953, 1024635773)
+	interestingArray(util.Random.nextInt)     //> res12: List[Int] = List(242681573, -1247263458, 11223665)
 	
 	val r = List.range(0,10,2)                //> r  : List[Int] = List(0, 2, 4, 6, 8)
 	r(1)                                      //> res13: Int = 2
@@ -87,4 +87,7 @@ object Collections {
                                                   //| 7
                                                   //| 9
 	}
+	
+	myRange.length                            //> res20: Int = 5
+	myRange.size                              //> res21: Int = 5
 }
